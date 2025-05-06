@@ -1,44 +1,158 @@
 @import "tailwindcss";
+@import "primeicons/primeicons.css";
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Definição da biblioteca de cores*/
+
+:root {
+  --primary: #C92071;
+  --secondary: #B5B6F2;
+  --tertiary: #991956;
+  --error: #EE4266;
+  --success: #52CA76;
+  --warning: #F6AA1C;
+
+  --hover-primary: #A00E3C;
+  --hover-secondary: #8A8ABE;
+  --hover-tertiary: #66133B;
+
+  --dark-gray: #1F1F1F;
+  --dark-gray-2: #474747;
+  --dark-gray-3: #666666;
+  --light-gray: #8F8F8F;
+  --light-gray-2: #CCCCCC;
+  --light-gray-3: #F5F5F5;
+  --white: #FFFFFF;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Definição de classes */
+
+.bg-primary {
+  background-color: var(--primary);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.bg-secondary {
+  background-color: var(--secondary);
 }
 
-.card {
-  padding: 2em;
+.bg-tertiary {
+  background-color: var(--tertiary);
 }
 
-.read-the-docs {
-  color: #888;
+.bg-error {
+  background-color: var(--error);
+}
+
+.bg-success {
+  background-color: var(--success);
+}
+
+.bg-warning {
+  background-color: var(--warning);
+}
+
+.bg-dark-gray {
+  background-color: var(--dark-gray);
+}
+
+.bg-dark-gray-2 {
+  background-color: var(--dark-gray-2);
+}
+
+.bg-dark-gray-3 {
+  background-color: var(--dark-gray-3);
+}
+
+.bg-light-gray {
+  background-color: var(--light-gray);
+}
+
+.bg-light-gray-2 {
+  background-color: var(--light-gray-2);
+}
+
+.bg-light-gray-3 {
+  background-color: var(--light-gray-3);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.text-tertiary {
+  color: var(--tertiary);
+}
+
+.text-error {
+  color: var(--error);
+}
+
+.text-success {
+  color: var(--success);
+}
+
+.text-warning {
+  color: var(--warning);
+}
+
+.text-dark-gray {
+  color: var(--dark-gray);
+}
+
+.text-dark-gray-2 {
+  color: var(--dark-gray-2);
+}
+
+.text-dark-gray-3 {
+  color: var(--dark-gray-3);
+}
+
+.text-light-gray {
+  color: var(--light-gray);
+}
+
+.text-light-gray-2 {
+  color: var(--light-gray-2);
+}
+
+.text-light-gray-3 {
+  color: var(--light-gray-3);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+/* Estilos sobrescritos ao tailwind */
+
+header > div > i:hover{
+  color: var(--primary);
+}
+
+a {
+  font-size: 1rem;
+  transition: 200ms;
+}
+
+a.underline:hover {
+  color: var(--primary);
+  cursor: pointer;
+}
+
+a.rounded-md:hover {
+  background-color: var(--tertiary);
 }
