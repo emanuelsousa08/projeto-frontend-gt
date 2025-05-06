@@ -1,16 +1,17 @@
+import React from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
-const HomePage = () => {
+const Layout = ({children}) => {
     return ( 
         <>
             <Header />
             <main>
-                <div></div>
+                {children}
             </main>
             <Footer />
         </>
      );
 }
  
-export default HomePage;
+export default Layout;
