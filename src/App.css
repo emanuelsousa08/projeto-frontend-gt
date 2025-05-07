@@ -207,9 +207,8 @@ div > i:hover {
   cursor: pointer;
 }
 
-a {
+a.underline {
   font-size: 1rem;
-  cursor: pointer;
   transition: 200ms;
 }
 
@@ -218,6 +217,65 @@ a.underline:hover {
   cursor: pointer;
 }
 
-a.rounded-md:hover {
+a.bg-primary{
+  font-size: 0.8rem;
+  padding: 0.7rem 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--primary);
+}
+a.bg-primary:hover {
   background-color: var(--tertiary);
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: var(--dark-gray-2);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--primary);
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a.active {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+nav ul li a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary);
+  transition: width 0.3s ease;
 }
