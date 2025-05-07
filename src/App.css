@@ -10,24 +10,24 @@
 /* Definição da biblioteca de cores*/
 
 :root {
-  --primary: #C92071;
-  --secondary: #B5B6F2;
+  --primary: #c92071;
+  --secondary: #b5b6f2;
   --tertiary: #991956;
-  --error: #EE4266;
-  --success: #52CA76;
-  --warning: #F6AA1C;
+  --error: #ee4266;
+  --success: #52ca76;
+  --warning: #f6aa1c;
 
-  --hover-primary: #A00E3C;
-  --hover-secondary: #8A8ABE;
-  --hover-tertiary: #66133B;
+  --hover-primary: #a00e3c;
+  --hover-secondary: #8a8abe;
+  --hover-tertiary: #66133b;
 
-  --dark-gray: #1F1F1F;
+  --dark-gray: #1f1f1f;
   --dark-gray-2: #474747;
   --dark-gray-3: #666666;
-  --light-gray: #8F8F8F;
-  --light-gray-2: #CCCCCC;
-  --light-gray-3: #F5F5F5;
-  --white: #FFFFFF;
+  --light-gray: #8f8f8f;
+  --light-gray-2: #cccccc;
+  --light-gray-3: #f5f5f5;
+  --white: #ffffff;
 }
 
 /* Definição de classes */
@@ -84,7 +84,6 @@
   background-color: var(--white);
 }
 
-
 .text-primary {
   color: var(--primary);
 }
@@ -137,14 +136,80 @@
   color: var(--white);
 }
 
+.focus\:outline-primary {
+  &:focus {
+    outline-color: var(--primary);
+  }
+}
+
+.focus\:ring-primary {
+  &:focus {
+    --tw-ring-color: var(--primary);
+  }
+}
+
+.border-primary {
+  border-color: var(--primary);
+}
+
+.border-secondary {
+  border-color: var(--secondary);
+}
+
+.border-tertiary {
+  border-color: var(--tertiary);
+}
+
+.border-error {
+  border-color: var(--error);
+}
+
+.border-success {
+  border-color: var(--success);
+}
+
+.border-warning {
+  border-color: var(--warning);
+}
+
+.border-dark-gray {
+  border-color: var(--dark-gray);
+}
+
+.border-dark-gray-2 {
+  border-color: var(--dark-gray-2);
+}
+
+.border-dark-gray-3 {
+  border-color: var(--dark-gray-3);
+}
+
+.border-light-gray {
+  border-color: var(--light-gray);
+}
+
+.border-light-gray-2 {
+  border-color: var(--light-gray-2);
+}
+
+.border-light-gray-3 {
+  border-color: var(--light-gray-3);
+}
+
+.border-white {
+  border-color: var(--white);
+}
+
 /* Estilos sobrescritos ao tailwind */
 
-header > div > i:hover{
+div > i:hover {
   color: var(--primary);
+  cursor: pointer;
 }
 
 a {
   font-size: 1rem;
+  cursor: pointer;
   transition: 200ms;
 }
 
