@@ -39,8 +39,8 @@ const Header = () => {
                 alt="Carrinho"
                 className="w-6 h-6 inline-block"
               />
-              <div className="absolute -top-2 -right-3 text-white bg-primary text-bold text-xs py-1 px-2 rounded-full w-5 h-5 flex items-center justify-center">
-                2
+              <div className="absolute -top-2 -right-3 text-white bg-primary text-bold text-xs py-1 px-1 rounded-full w-5 h-5 flex items-center justify-center">
+                1
               </div>
             </div>
           </div>
