@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Logo from "./Logo";
 import { NavLink } from "react-router-dom";
 
@@ -6,11 +6,11 @@ const Header = () => {
   return (
     <header className="bg-white shadow-md w-full">
       <div className="container mx-auto px-3 py-3">
-        <div className="flex columns-3 md:flex-row items-center justify-between gap-4">
+        <div className="flex flex-col md:flex-row items-center justify-between space-x-4">
           <div className="logo py-7">
             <Logo location="header" />
           </div>
-          <div className="hidden md:block flex-grow mx-4 max-w-md relative">
+          <div className="hidden md:block flex-grow max-w-3xl relative">
             <input
               type="text"
               placeholder="Pesquisar produto..."
@@ -19,7 +19,7 @@ const Header = () => {
             <i className="pi pi-search text-dark-gray-3 absolute right-4 top-1/2 transform -translate-y-1/2 transition-colors duration-250" />
           </div>
           <div className="flex items-center gap-4">
-            <div className="hidden md:block flex-grow px-2 max-w-md gap-4">
+            <div className="hidden md:block flex-grow px-2 max-w-md gap-8">
               <a
                 href="#"
                 className="underline text-dark-gray-2 font-normal px-4"
@@ -28,7 +28,7 @@ const Header = () => {
               </a>
               <a
                 href="#"
-                className="bg-primary text-white font-bold p-3 px-10 rounded-md"
+                className="bg-primary text-white font-bold"
               >
                 Entrar
               </a>
@@ -51,7 +51,7 @@ const Header = () => {
             <input
               type="text"
               placeholder="Pesquisar produto..."
-              className="w-full bg-light-gray-3 p-3 border-none rounded-md outline-offset-4 focus:outline-primary focus:ring-primary"
+              className="md:hidden w-full bg-light-gray-3 p-3 border-none rounded-md outline-offset-4 focus:outline-primary focus:ring-primary"
             />
             <i className="pi pi-search text-light-gray-2 absolute right-4 top-1/2 transform -translate-y-1/2" />
           </div>
@@ -59,26 +59,25 @@ const Header = () => {
 
         <nav>
           <div className="container mx-auto px-4">
-            <ul className="flex overflow-x-auto whitespace-nowrap justify-start py-1 gap-8">
-              <li className="text-primary font-medium relative inline-block pb-1 border-b-2 border-primary">
-                <NavLink to="/">Home</NavLink>
+            <ul className="flex overflow-x-auto whitespace-nowrap hover:text-primary justify-start py-1 gap-8">
+              <li>
+                <NavLink to="/">
+                  Home
+                </NavLink>
               </li>
-              <li className="text-dark-gray-2 hover:text-primary relative inline-block pb-1 group transition-colors duration-200">
+              <li>
                 <NavLink to="/productlistingpage">
                   Produtos
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
                 </NavLink>
               </li>
-              <li className="text-dark-gray-2 hover:text-primary relative inline-block pb-1 group transition-colors duration-200">
-                <NavLink to="/categorias">
+              <li>
+                <NavLink to="/notfound">
                   Categorias
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
                 </NavLink>
               </li>
-              <li className="text-dark-gray-2 hover:text-primary relative inline-block pb-1 group transition-colors duration-200">
-                <NavLink to="/meus-pedidos">
+              <li>
+                <NavLink to="/notfound">
                   Meus Pedidos
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
                 </NavLink>
               </li>
             </ul>
