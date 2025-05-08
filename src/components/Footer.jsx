@@ -4,11 +4,11 @@ import React from "react";
 const InfoColuna = ({ title, informations }) => {
     return(
     <div>
-        <h3 className="text-white font-bold mb-2">{title}</h3>
+        <h3 className="text-white font-bold mb-5">{title}</h3>
         <ul className="space-y-1">
         {informations.map((item, index) => (
             <li key={index}>
-               <a href={item.link} className="text-white hover:underline text-sm">
+               <a href={item.link} className="text-white white-space-nowrap hover:underline text-sm">
                     {item.text}
                 </a>      
             </li>
@@ -52,24 +52,24 @@ const Footer = () => {
 
     return ( 
         <footer className="bg-dark-gray basis-auto">
-            <div className="flex flex-col md:flex-row justify-around text-white p-12 gap-80">
+            <div className="flex flex-col md:flex-row justify-between text-white p-12 md:gap-40">
                 <div className="flex flex-col gap-4 p-8 max-w-sm">
                     <Logo location="footer" />
                     <p className="p-2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque eveniet laboriosam magnam dignissimos et itaque tempore, architecto nisi iste, enim explicabo aliquid maxime ea illo ad eius laborum odit quis.</p>
-                    <div className="flex my-6 gap-10">
+                    <div className="flex mt-6 gap-10">
                         <img src="./src/assets/facebook.svg" alt="facebook-icon" />
                         <img src="./src/assets/instagram.svg" alt="inastagram-icon" />
                         <img src="./src/assets/twitter.svg" alt="twitter-icon" />
                     </div>
                 </div>
-                <div className="flex flex-row md:flex-row gap-12 md:gap-24">
+                <div className="flex flex-wrap white-space-nowrap gap-10 md:flex-nowrap md:gap-40">
                         {infoData.map((section, idx) => (
                             <InfoColuna key={idx} {...section} />
                         ))}
-                    </div>
+                </div>
             </div>
 
-            <hr className="border-t border-white"/>
+            <hr className="border-t border-white mx-12 md:mx-20"/>
             <p className="text-center text-white text-xs p-6">© 2024 Digital Store</p>
 
         </footer>
