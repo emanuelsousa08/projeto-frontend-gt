@@ -70,7 +70,7 @@ const Footer = () => {
             </div>
 
             <hr className="border-t border-white mx-12 md:mx-20"/>
-            <p className="text-center text-white text-xs p-6">© 2024 Digital Store</p>
+            <p className="text-center text-white text-xs p-6">@ 2024 Digital Store</p>
 
         </footer>
      );
