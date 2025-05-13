@@ -114,7 +114,7 @@ const Header = () => {
         </div>
 
 
-        <nav className="hidden lg:block mt-4">
+        <nav className="hidden lg:flex mt-4">
           <div className="container mx-auto px-4">
             <ul className="flex overflow-x-auto whitespace-nowrap gap-8 py-1">
               <li><NavLink to="/">Home</NavLink></li>
