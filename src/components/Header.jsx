@@ -12,7 +12,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="lg:hidden">
             <button
-              className="text-gray-700 text-2xl"
+              className="text-dark-gray-2 text-2xl"
               onClick={() => setIsMenuOpen(prev => !prev)}
             >
               <i className="pi pi-bars"></i>
