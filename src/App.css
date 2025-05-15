@@ -17,10 +17,6 @@
   --success: #52ca76;
   --warning: #f6aa1c;
 
-  --hover-primary: #a00e3c;
-  --hover-secondary: #8a8abe;
-  --hover-tertiary: #66133b;
-
   --dark-gray: #1f1f1f;
   --dark-gray-2: #474747;
   --dark-gray-3: #666666;
@@ -136,18 +132,6 @@
   color: var(--white);
 }
 
-.focus\:outline-primary {
-  &:focus {
-    outline-color: var(--primary);
-  }
-}
-
-.focus\:ring-primary {
-  &:focus {
-    --tw-ring-color: var(--primary);
-  }
-}
-
 .border-primary {
   border-color: var(--primary);
 }
@@ -223,6 +207,7 @@ a.bg-primary{
   border-radius: 0.5rem;
   background-color: var(--primary);
 }
+
 a.bg-primary:hover {
   background-color: var(--tertiary);
   cursor: pointer;
@@ -278,4 +263,16 @@ nav ul li a.active::after {
   height: 2px;
   background-color: var(--primary);
   transition: width 0.3s ease;
+}
+
+.focus\:outline-primary {
+  &:focus {
+    outline-color: var(--primary);
+  }
+}
+
+.focus\:ring-primary {
+  &:focus {
+    --tw-ring-color: var(--primary);
+  }
 }
