@@ -89,7 +89,7 @@ const Header = () => {
                 <NavLink to="/" onClick={() => setIsMenuOpen(false)}>
                   Home
                 </NavLink>
-                <NavLink to="/productlistingpage" onClick={() => setIsMenuOpen(false)}>
+                <NavLink to="/products" onClick={() => setIsMenuOpen(false)}>
                   Produtos
                 </NavLink>
                 <NavLink to="/notfound" onClick={() => setIsMenuOpen(false)}>
@@ -118,7 +118,7 @@ const Header = () => {
           <div className="container mx-auto px-4">
             <ul className="flex overflow-x-auto whitespace-nowrap gap-8 py-1">
               <li><NavLink to="/">Home</NavLink></li>
-              <li><NavLink to="/productlistingpage">Produtos</NavLink></li>
+              <li><NavLink to="/products">Produtos</NavLink></li>
               <li><NavLink to="/notfound">Categorias</NavLink></li>
               <li><NavLink to="/notfound">Meus Pedidos</NavLink></li>
             </ul>
