@@ -279,3 +279,119 @@ nav ul li a.active::after {
   background-color: var(--primary);
   transition: width 0.3s ease;
 }
+
+/*Tipografia*/
+
+/*Botões*/
+
+.primary-button {
+  width: 158px;
+  height: 40px;
+  Top: 20px;
+  left: 20px;
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: var(--light-gray-3);
+}
+
+.primary-button:hover{
+  animation: 300ms ease-out;
+  background-color: var(--hover-primary);
+  cursor: pointer;
+  color: var(--light-gray-3);
+}
+
+.primary-button:disabled{
+  background-color: var(--light-gray-2);
+  color: var(--light-gray-3);
+}
+
+.secondary-button {
+  width: 158px;
+  height: 40px;
+  Top: 20px;
+  left: 20px;
+  border-radius: 8px;
+  background-color: var(--light-gray-3);
+  color: var(--primary);
+}
+.secondary-button:hover{
+  animation: 300ms ease-out;
+  background-color: var(--hover-secondary);
+  color: #F7F7FC;
+  cursor: pointer;
+}
+
+.secondary-button:disabled{
+  background-color: white;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.shop-button{
+  width: 158px;
+  height: 40px;
+  Top: 20px;
+  left: 20px;
+  border-radius: 8px;
+  background-color: #FFB31F;
+  color: var(--light-gray-3);
+}
+
+.shop-button:hover{
+  background-color: #CF8900;
+  color: var(--light-gray-3);
+  animation: 300ms ease-out;
+  cursor: pointer;
+}
+
+.shop-button:disabled{
+  background-color: var(--light-gray-2);
+  color: var(--light-gray-3);
+}
+
+.icon-button{
+  width: 158px;
+  height: 40px;
+  Top: 20px;
+  left: 20px;
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: var(--light-gray-3);
+}
+
+.icon-button:hover{
+  background-color: var(--hover-tertiary);
+  color: var(--light-gray-3);
+  animation: 300ms ease-out;
+  cursor: pointer;
+}
+
+.icon-button:disabled{
+  background-color: var(--light-gray-2);
+  color: var(--light-gray-3);
+}
+
+.radio{
+  width: 22px;
+  height: 22px;
+  top: 20px;
+  left: 20px;
+}
+
+.radio:checked{
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.checkbox{
+  width: 22px;
+  height: 22px;
+  top: 20px;
+  left: 20px;
+}
+
+.checkbox:checked{
+  border-color: var(--primary);
+  color: var(--primary);
+}
