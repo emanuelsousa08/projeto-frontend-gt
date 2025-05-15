@@ -11,11 +11,21 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path='/' element={<Layout />}>
-              <Route index element={<HomePage />} />
-              <Route path='/productlistingpage' element={<ProductListingPage />} />
-              <Route path='/productviewpage' element={<ProductViewPage />} />
-          </Route>
+          <Route path="/" element={
+            <Layout>
+              <HomePage />
+            </Layout>
+          } />
+          <Route path="/products" element={
+            <Layout>
+              <ProductListingPage />
+            </Layout>
+          } />
+          <Route path="/product/:id" element={
+            <Layout>
+              <ProductViewPage />
+            </Layout>
+          } />
         </Routes>
       </Router>
     </>

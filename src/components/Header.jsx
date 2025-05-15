@@ -7,7 +7,8 @@ const Header = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-md w-full z-50">
+    <>
+    <header className="bg-white shadow-md w-full">
       <div className="container mx-auto px-3 py-3">
         <div className="flex items-center justify-between">
           <div className="lg:hidden">
@@ -57,13 +58,13 @@ const Header = () => {
               </a>
             </div>
 
-            <div className="relative cursor-pointer mx-0 lg:ml-10 scale-90 right-3 lg:right-1 lg:scale-100">
+            <div className="relative cursor-pointer mx-0 md:ml-4 lg:ml-10 right-3 md:right-1 lg:right-1">
               <img
                 src="/src/assets/mini-cart.svg"
                 alt="Carrinho"
                 className="w-6 h-6"
               />
-              <div className="absolute -top-1 -right-3 bg-primary text-white text-xs font-bold py-1 px-1 scale-90 lg:scale-100 rounded-full w-4.5 h-4.5 inline-flex items-center justify-center">
+              <div className="absolute -top-1 -right-3 bg-primary text-white text-xs font-bold py-1 px-1 rounded-full w-4.5 h-4.5 flex items-center justify-center">
                 2
               </div>
             </div>
@@ -80,7 +81,7 @@ const Header = () => {
           />
         </div>
 
-        <div className={`transition-all duration-300 ease-in-out overflow-hidden lg:hidden ${isMenuOpen ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+        <div className={`transition-all duration-300 ease-in-out overflow-hidden lg:hidden ${isMenuOpen ? 'max-h-[710px] max-w-[320px] opacity-100 mt-4' : 'max-h-0 max-w-0 opacity-0'}`}>
           <div className="bg-white rounded-md shadow-md p-4 space-y-4">
             <div>
               <h2 className="text-dark-gray font-semibold mb-2">Páginas</h2>
@@ -113,7 +114,6 @@ const Header = () => {
           </div>
         </div>
 
-
         <nav className="hidden lg:flex mt-4">
           <div className="container mx-auto px-4">
             <ul className="flex overflow-x-auto whitespace-nowrap gap-8 py-1">
@@ -126,6 +126,7 @@ const Header = () => {
         </nav>
       </div>
     </header>
+    </>
   );
 };
 

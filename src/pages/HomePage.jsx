@@ -4,11 +4,12 @@ import Header from "../components/Header";
 const HomePage = () => {
     return ( 
         <>
-            <Header />
             <main>
-                <div></div>
+                <div className="container mx-auto py-8">
+                    <h1 className="text-2xl font-bold">Página Inicial</h1>
+                    <p>Conteúdo da página inicial vai aqui...</p>
+                </div>
             </main>
-            <Footer />
         </>
      );
 }
