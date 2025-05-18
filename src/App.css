@@ -16,6 +16,8 @@
   --error: #ee4266;
   --success: #52ca76;
   --warning: #f6aa1c;
+  --label: #E7FF86;
+  --main: #f9f8fe;
 
   --dark-gray: #1f1f1f;
   --dark-gray-2: #474747;
@@ -184,7 +186,7 @@
   border-color: var(--white);
 }
 
-/* Estilos sobrescritos ao tailwind */
+/* Estilos do header */
 
 div > i:hover {
   color: var(--primary);
@@ -331,7 +333,7 @@ nav ul li a.active::after {
   top: 20px;
   left: 20px;
   border-radius: 8px;
-  background-color: #ffb31f;
+  background-color: var(--warning);
   color: var(--light-gray-3);
 }
 
@@ -391,4 +393,11 @@ nav ul li a.active::after {
 .checkbox:checked {
   border-color: var(--primary);
   color: var(--primary);
+}
+
+/* Outros elementos */
+
+.label-discount {
+  background-color: var(--label);
+  color: var(--dark-gray-2);
 }
