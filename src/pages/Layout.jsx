@@ -9,8 +9,8 @@ const Layout = ({children}) => {
         <>
             <Header />
             <main>
-                <Section titleAlign="center"></Section>
-                <ProductCard />
+                {/* <Section titleAlign="center"></Section> */}
+                {/* <ProductCard /> */}
                 {children}
             </main>
             <Footer />
