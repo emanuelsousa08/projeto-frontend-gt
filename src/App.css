@@ -295,14 +295,12 @@ nav ul li a.active::after {
 
 .primary-button:hover {
   animation: 300ms ease-out;
-  background-color: var(--hover-primary);
+  background-color: var(--tertiary);
   cursor: pointer;
-  color: var(--light-gray-3);
 }
 
 .primary-button:disabled {
   background-color: var(--light-gray-2);
-  color: var(--light-gray-3);
 }
 
 .secondary-button {
@@ -316,7 +314,7 @@ nav ul li a.active::after {
 }
 .secondary-button:hover {
   animation: 300ms ease-out;
-  background-color: var(--hover-secondary);
+  background-color: var(--secondary);
   color: #f7f7fc;
   cursor: pointer;
 }
@@ -339,7 +337,6 @@ nav ul li a.active::after {
 
 .shop-button:hover {
   background-color: #cf8900;
-  color: var(--light-gray-3);
   animation: 300ms ease-out;
   cursor: pointer;
 }
@@ -360,8 +357,7 @@ nav ul li a.active::after {
 }
 
 .icon-button:hover {
-  background-color: var(--hover-tertiary);
-  color: var(--light-gray-3);
+  background-color: var(--tertiary);
   animation: 300ms ease-out;
   cursor: pointer;
 }
