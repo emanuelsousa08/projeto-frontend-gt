@@ -9,7 +9,7 @@ const Layout = ({children}) => {
         <>
             <Header />
             <main>
-                <Section />
+                <Section titleAlign="center"></Section>
                 <ProductCard />
                 {children}
             </main>
