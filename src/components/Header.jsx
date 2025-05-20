@@ -58,13 +58,13 @@ const Header = () => {
               </a>
             </div>
 
-            <div className="relative cursor-pointer mx-0 md:ml-4 lg:ml-10 right-3 md:right-1 lg:right-1">
+            <div className="relative cursor-pointer mx-auto md:ml-2 lg:ml-5 right-1">
               <img
                 src="/src/assets/mini-cart.svg"
                 alt="Carrinho"
-                className="w-6 h-6"
+                className="min-w-5 min-h-5"
               />
-              <div className="absolute -top-1 -right-3 bg-primary text-white text-xs font-bold py-1 px-1 rounded-full w-4.5 h-4.5 flex items-center justify-center">
+              <div className="absolute -top-2 -right-2 bg-primary text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">
                 2
               </div>
             </div>
@@ -89,7 +89,7 @@ const Header = () => {
                 <NavLink to="/" onClick={() => setIsMenuOpen(false)}>
                   Home
                 </NavLink>
-                <NavLink to="/productlistingpage" onClick={() => setIsMenuOpen(false)}>
+                <NavLink to="/products" onClick={() => setIsMenuOpen(false)}>
                   Produtos
                 </NavLink>
                 <NavLink to="/notfound" onClick={() => setIsMenuOpen(false)}>
@@ -118,7 +118,7 @@ const Header = () => {
           <div className="container mx-auto px-4">
             <ul className="flex overflow-x-auto whitespace-nowrap gap-8 py-1">
               <li><NavLink to="/">Home</NavLink></li>
-              <li><NavLink to="/productlistingpage">Produtos</NavLink></li>
+              <li><NavLink to="/products">Produtos</NavLink></li>
               <li><NavLink to="/notfound">Categorias</NavLink></li>
               <li><NavLink to="/notfound">Meus Pedidos</NavLink></li>
             </ul>

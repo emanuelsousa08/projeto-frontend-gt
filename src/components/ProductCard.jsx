@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 const ProductCard = ({image, name, price, priceDiscount}) => {
@@ -20,6 +21,12 @@ const ProductCard = ({image, name, price, priceDiscount}) => {
                 <span className="font-[Inter] text-[24px] text-dark-gray">{priceDiscount}</span>)}
             </div>
         </div>
+=======
+const ProductCard = ({ children }) => {
+    return ( 
+        <div className="bg-white py-2 px-2">
+            { children }
+>>>>>>> f73889755d3af57ed90517876453f966b26425c7
         </div>
      );
 }
