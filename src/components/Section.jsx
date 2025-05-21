@@ -5,9 +5,7 @@ import React from 'react';
 const Section = ({ children }) => {
 
   return (
-    
-      {children}
-    
+    <>{children}</>
   );
 };
 

@@ -1,32 +1,33 @@
 
 import React from "react";
 
-// const ProductCard = ({image, name, price, priceDiscount}) => {
 
-//     const hasDiscount = !!priceDiscount;
-//     return ( 
-//         <div className="w-[292px] h-[321px]">
-//         <div className="w-[292px] h-[321px]">
-//             {image}
-//         </div>
-//         <div className="mt-2">
-//                 <h1 className="font-[Inter] font-[400px] leading-[38px] text-[24px] tracking-[0.75px]">{name}</h1>
-//             <div className="flex items-center gap-2">
-//                 <span className={`font-[Inter] font-[400px] leading-[38px] text-[24px] tracking-[0.75px]
-//                     ${hasDiscount ? "text-light-gray line-through": "text-dark-gray"} ` }>
-//                         {price}
-//                 </span>
-                
-//                 {hasDiscount && (
-//                 <span className="font-[Inter] text-[24px] text-dark-gray">{priceDiscount}</span>)}
-//             </div>
-//         </div>
 
-const ProductCard = ({ children }) => {
+const ProductCard = ({ title, imagePath }) => {
     return ( 
-        <div className="bg-white py-2 px-2">
-            { children }
-        </div>
+            <div className="w-80 h-52 md:w-96 md:h-64 bg-slate-200 rounded-lg relative overflow-hidden">
+      
+      {/* Desconto */}
+      <div className="absolute top-3 left-3 px-3.5 py-[5px] bg-lime-200 rounded-[29px] z-10">
+        <span className="text-zinc-700 text-sm font-bold font-['Inter'] leading-snug tracking-wide">
+          30% OFF
+        </span>
+      </div>
+
+      {/* Imagem */}
+      <img 
+        src={imagePath} 
+        alt={title} 
+        className="w-full h-full object-cover"
+      />
+
+      {/* Overlay com botão */}
+      <div className="absolute bottom-3 left-1/2 transform -translate-x-[95%] z-20">
+        <button className="secondary-button px-6 py-2 rounded-md">
+          Comprar
+        </button>
+      </div>
+    </div>
      );
 }
  
