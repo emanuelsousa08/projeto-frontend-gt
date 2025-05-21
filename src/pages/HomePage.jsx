@@ -1,25 +1,4 @@
-<<<<<<< HEAD
-import Section from '../components/Section'
-import ProductCard from '../components/ProductCard';
 
-const HomePage = () => {
-    return ( 
-        <>
-            <main>
-                <div className="container mx-2 py-8 items-center justify-arround">
-                    <Section titleAlign="center"></Section>
-                    <ProductCard>
-                        <h2>Coleções em destaque</h2>
-                        <h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h6>
-                    </ProductCard>
-                </div>
-            </main>
-        </>
-     );
-}
- 
-export default HomePage;
-=======
 import { href } from "react-router-dom";
 import CardDestaque from "../components/CardDestaque";
 import IconDestaque from "../components/IconDestaque";
@@ -93,4 +72,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
->>>>>>> aef15129692cf50e32bc16d267762d284c38005c
