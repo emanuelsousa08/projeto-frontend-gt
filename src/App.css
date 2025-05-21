@@ -281,6 +281,24 @@ nav ul li a.active::after {
 
 /*Tipografia*/
 
+
+/*icones das coleções*/
+
+.icons-collection{
+  stroke: black;
+  fill: none;
+  transition: stroke 300ms ease-out;
+  height: 50px;
+  width: 50px;
+}
+
+.icons-collection:hover{
+  stroke: var(--primary);
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+
+
 /*Botões*/
 
 .primary-button {
