@@ -130,16 +130,22 @@ const HomePage = () => {
             </div>
           </div>
         </Section>
+        {/* PRIMEIRA SECTION DPOIS DO CARROSEL*/}
+        <Section>
           <div className="h-100 w-full px-4 md:px-0">
-            <div className="justify-start text-zinc-700 text-2xl font-bold font-['Inter'] leading-9 tracking-wide">
+            <div className="ml-20 text-zinc-700 text-2xl font-bold font-['Inter'] leading-9 tracking-wide">
             Coleções em destaque
             </div>
-            <div className="flex flex-col md:flex-row gap-4 md:gap-6 overflow-x-auto md:overflow-visible">
+            <div className="flex flex-col md:flex-row gap-4 md:gap-6 overflow-x-auto md:overflow-visible justify-center">
               {arrayDestaque.map((item, index) => (
                 <CardDestaque key={index} {...item} className="w-full md:w-64 flex-shrink-0" />
               ))}
             </div>
           </div>
+        </Section>
+
+        {/*SEGUNDA SECTION DEPOIS DA PRIMEIRA*/}
+        <Section className="w-full">
         <div className="w-full">
           <div className="h-50 flex flex-col items-center w-full md:px-9">
             <div className="flex justify-center textdark-gray-2 text-2xl font-bold font-['Inter'] leading-9 tracking-wide mb-6">
@@ -152,6 +158,8 @@ const HomePage = () => {
             </div>
           </div>
         </div>
+        </Section>
+        
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product) => (
             <ProductCard
