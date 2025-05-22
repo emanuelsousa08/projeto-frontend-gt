@@ -1,11 +1,10 @@
 import React from 'react';
 
+const Section = ({ title, titleAlign = 'left', link, children }) => {
 
-
-const Section = ({ children }) => {
 
   return (
-    <>{children}</>
+      <>{children}</>
   );
 };
 
