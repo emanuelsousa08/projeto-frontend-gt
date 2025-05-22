@@ -42,11 +42,11 @@ const HomePage = () => {
     <>
       <main className="bg-light-gray-3">
         <Section>
-          <div className="h-100 w-full px-4 md:px-0">
-            <div className="justify-start text-zinc-700 text-2xl font-bold font-['Inter'] leading-9 tracking-wide">
+          <div className="h-100 w-full px-4 md:px-6">
+            <div className="ml-13 text-zinc-700 text-2xl font-bold font-['Inter'] leading-9 tracking-wide">
             Coleções em destaque
             </div>
-            <div className="flex flex-col md:flex-row gap-4 md:gap-6 overflow-x-auto md:overflow-visible">
+            <div className="flex flex-col md:flex-row gap-4 md:gap-6 overflow-x-auto md:overflow-visible justify-center">
               {arrayDestaque.map((item, index) => (
                 <CardDestaque key={index} {...item} className="w-full md:w-64 flex-shrink-0" />
               ))}
