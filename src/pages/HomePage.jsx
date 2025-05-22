@@ -41,6 +41,7 @@ const HomePage = () => {
   return (
     <>
       <main className="bg-light-gray-3">
+
         <Section>
           <div className="h-100 w-full px-4 md:px-6">
             <div className="ml-13 text-zinc-700 text-2xl font-bold font-['Inter'] leading-9 tracking-wide">
@@ -53,6 +54,7 @@ const HomePage = () => {
             </div>
           </div>
         </Section>
+
         <Section className="w-full">
           <div className="h-50 flex flex-col items-center w-full md:px-9">
             <div className="flex justify-center text-zinc-700 text-2xl font-bold font-['Inter'] leading-9 tracking-wide mb-6">
@@ -65,6 +67,7 @@ const HomePage = () => {
             </div>
           </div>
         </Section>
+        
       </main>
     </>
   );
