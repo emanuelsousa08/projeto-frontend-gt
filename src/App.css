@@ -415,3 +415,55 @@ nav ul li a.active::after {
   background-color: var(--label);
   color: var(--dark-gray-2);
 }
+/*A label filtrar por preço*/
+.label-select {
+  width: 308px;
+  height: 60px;
+}
+/*titulo "Filtrar por"*/
+.title-label {
+  font-size: 16px;
+  color: var(--dark-gray-2);
+  border-bottom: 1px solid var(--light-gray-2);
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.label-dropdown {
+  width: 100%;
+  height: 32px;
+  color: var(--dark-gray-2);
+  outline-offset: 2px;
+}
+/*a div do filtro, mas vou ter que tirar*/
+.filter-group {
+  background-color: white;
+  width: 308px;
+  padding: 16px;
+}
+
+/*nomes dos  filtros: marca, categoria, gênero etc.*/
+.filter-title {
+  font-size: 16px;
+  color: var(--dark-gray-2);
+  margin-bottom: 12px;
+  padding-bottom: 4px;
+  font-weight: bold;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--dark-gray-2);
+  margin: 4px 0;
+  font-weight: 16px;
+}
+
+.filter-option input {
+  width: 22px;
+  height: 22px;
+  accent-color: var(--primary);
+}
