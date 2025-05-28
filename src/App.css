@@ -82,6 +82,10 @@
   background-color: var(--white);
 }
 
+.bg-main{
+  background-color: var(--main);
+}
+
 .text-primary {
   color: var(--primary);
 }
@@ -195,7 +199,7 @@ div > i:hover {
 
 a.underline {
   font-size: 1rem;
-  transition: 200ms;
+  transition: 200ms ease-in-out;
 }
 
 a.underline:hover {
@@ -229,7 +233,7 @@ nav ul li a {
   color: var(--dark-gray-2);
   text-decoration: none;
   position: relative;
-  transition: color 0.3s ease;
+  transition: color 300ms ease;
 }
 
 nav ul li a:hover {
@@ -284,16 +288,15 @@ nav ul li a.active::after {
 
 /*icones das coleções*/
 
-.icons-collection{
-  stroke: black;
-  fill: none;
-  transition: stroke 300ms ease-out;
+.icons-collection {
+  fill: var(--dark-gray);
+  transition: all 300ms ease-out;
   height: 50px;
   width: 50px;
 }
 
-.icons-collection:hover{
-  stroke: var(--primary);
+.icons-collection:hover {
+  fill: var(--primary);
   cursor: pointer;
   transform: translateY(-5px);
 }
