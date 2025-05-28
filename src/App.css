@@ -447,8 +447,8 @@ nav ul li a.active::after {
 .filter-title {
   font-size: 16px;
   color: var(--dark-gray-2);
-  margin-bottom: 12px;
   padding-bottom: 4px;
+  margin-top: 12px;
   font-weight: bold;
 }
 
