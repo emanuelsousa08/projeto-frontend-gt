@@ -1,6 +1,6 @@
 import ProductCard from "./ProductCard"
 
-const ProductList = ({ cardWidth = "w-full", cardHeight = "h-auto" }) => {
+const ProductList = () => {
 
   const products = [
     {
@@ -164,8 +164,6 @@ const ProductList = ({ cardWidth = "w-full", cardHeight = "h-auto" }) => {
       image: "/k-swiss-v8-masc.png",
     },
   ];
-
-
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-0">
