@@ -40,19 +40,16 @@ const ProductListingPage = () => {
     <div className="bg-main">
       <div className="container mx-auto pt-8">
       <div className="flex flex-col md:flex-row">
-        {/* Botão do filtro mobile */}
         <button
           onClick={toggleFilter}
           className="md:hidden p-2 m-2 bg-primary text-white rounded"
         >
           Filtrar por
         </button>
-
-        {/* Sidebar com filtros */}
         <aside
-          className={`fixed top-0 left-0 w-[20%] h-full bg-white z-50 p-5 overflow-y-auto shadow-lg transition-transform transform ${
+          className={`fixed top-0 left-0 w-full h-fit bg-white z-50 p-5 overflow-y-auto shadow-lg transition-transform transform ${
             showFilter ? "translate-x-0" : "-translate-x-full"
-          } md:static md:translate-x-0 md:w-64`}
+          } md:static md:translate-x-0 md:w-[25%]`}
         >
           <button
             onClick={toggleFilter}
@@ -60,8 +57,10 @@ const ProductListingPage = () => {
           >
             ✕
           </button>
-          <LabelSelect onChange={labelChange} />
-          <div className="m-7 h-308 w-60 p-5 flex flex-col bg-white rounded justify-start items-start">
+          <div className="w-full">
+            <LabelSelect onChange={labelChange} />
+          </div>
+          <div className="m-7 p-5 flex flex-col bg-white rounded justify-start items-start mb-8">
             <FilterGroup
               className="text-dark-gray-2 filter-title"
               title="Marca"
@@ -88,9 +87,7 @@ const ProductListingPage = () => {
             />
           </div>
         </aside>
-
-        {/* Lista de produtos */}
-        <main className="flex-1 md:ml-8">
+        <main className="flex md:ml-4 md:mb-8 w-[75%]">
           <ProductListing />
         </main>
       </div>
