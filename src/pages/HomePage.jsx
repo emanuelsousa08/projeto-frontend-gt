@@ -49,6 +49,7 @@ const HomePage = () => {
   const products = [
     {
       id: 1,
+      category: "Tênis",
       name: "K-Swiss V8 - Masculino",
       price: "$200",
       priceDiscount: "$100",
@@ -56,6 +57,7 @@ const HomePage = () => {
     },
     {
       id: 2,
+      category: "Tênis",
       name: "K-Swiss V8 - Masculino",
       price: "$200",
       priceDiscount: "$100",
@@ -63,6 +65,7 @@ const HomePage = () => {
     },
     {
       id: 3,
+      category: "Tênis",
       name: "K-Swiss V8 - Masculino",
       price: "$200",
       priceDiscount: "$100",
@@ -70,6 +73,7 @@ const HomePage = () => {
     },
     {
       id: 4,
+      category: "Tênis",
       name: "K-Swiss V8 - Masculino",
       price: "$200",
       priceDiscount: "$100",
@@ -77,6 +81,7 @@ const HomePage = () => {
     },
     {
       id: 5,
+      category: "Tênis",
       name: "K-Swiss V8 - Masculino",
       price: "$200",
       priceDiscount: "$100",
@@ -84,6 +89,7 @@ const HomePage = () => {
     },
     {
       id: 6,
+      category: "Tênis",
       name: "K-Swiss V8 - Masculino",
       price: "$200",
       priceDiscount: "$100",
@@ -91,6 +97,7 @@ const HomePage = () => {
     },
     {
       id: 7,
+      category: "Tênis",
       name: "K-Swiss V8 - Masculino",
       price: "$200",
       priceDiscount: "$100",
@@ -98,6 +105,7 @@ const HomePage = () => {
     },
     {
       id: 8,
+      category: "Tênis",
       name: "K-Swiss V8 - Masculino",
       price: "$200",
       priceDiscount: "$100",
@@ -136,7 +144,7 @@ const HomePage = () => {
         {/* PRIMEIRA SECTION DPOIS DO CARROSEL*/}
         <Section>
           <div className="h-100 w-full px-4 md:px-0">
-            <div className="ml-20 text-zinc-700 text-2xl font-bold font-['Inter'] leading-9 tracking-wide">
+            <div className="lex justify-center text-dark-gray-2 text-2xl font-bold font-['Inter'] leading-9 tracking-wide mb-6">
               Coleções em destaque
             </div>
             <div className="flex flex-col md:flex-row gap-4 md:gap-6 overflow-x-auto md:overflow-visible justify-center">
@@ -155,10 +163,10 @@ const HomePage = () => {
         <Section className="w-full">
           <div className="w-full">
             <div className="h-50 flex flex-col items-center w-full md:px-9">
-              <div className="flex justify-center textdark-gray-2 text-2xl font-bold font-['Inter'] leading-9 tracking-wide mb-6">
+              <div className="flex justify-center text-dark-gray-2 text-2xl font-bold font-['Inter'] leading-9 tracking-wide mb-6">
                 Coleções em destaque
               </div>
-              <div className="flex flex-col md:flex-row gap-3 md:gap-5 overflow-x-auto md:overflow-visible px-4">
+              <div className="flex flex-col md:flex-row gap-3 md:gap-5 overflow-x-auto md:overflow-visible object-contain px-4">
                 {arrayIconDestaque.map((item, idx) => (
                   <IconDestaque key={idx} {...item} />
                 ))}
@@ -167,21 +175,35 @@ const HomePage = () => {
           </div>
         </Section>
 
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.map((product) => (
-            <ProductCard
-              key={product.id}
-              image={product.image}
-              name={product.name}
-              price={product.price}
-              priceDiscount={product.priceDiscount}
-            />
-          ))}
-        </div>
+        <Section>
+          <div className="container mx-auto w-4/5">
+            <div className="w-[88%] ml-20 mb-6 items-center">
+              <div className="flex justify-between items-center">
+                <h5 className="text-dark-gray-2 text-2xl font-bold">Produtos em alta</h5>
+                <a className="text-sm text-primary cursor-pointer font-normal flex items-center gap-1">
+                  Ver todos <img src="./src/assets/Right-24px.svg" />
+                </a>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-0">
+              {products.map((product, index) => (
+                <ProductCard
+                  key={product.id}
+                  image={product.image}
+                  category={product.category}
+                  name={product.name}
+                  price={product.price}
+                  priceDiscount={product.priceDiscount}
+                  showDiscount={index < 2}
+                />
+              ))}
+            </div>
+          </div>
+        </Section>
 
         <div className="w-full max-w-[1440px] h-[553px] bg-white flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-10 gap-10 md:h-[553px] mx-auto">
           {/* ESQUERDA - imagem com o fundo circular */}
-          <div className="relative w-full flex justify-center md:justify-start">
+          <div className="relative w-full flex justify-center md:justify-start z-10">
             <div className="w-[300px] h-[300px] md:w-[466px] md:h-[466px] bg-gradient-to-b from-violet-700/25 to-white/0 rounded-full absolute top-0 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 z-0" />
             <img
               className="w-[250px] h-auto md:w-[573px] md:h-80 relative z-10"
@@ -191,7 +213,7 @@ const HomePage = () => {
           </div>
 
           {/* DIREITA - textos e botão */}
-          <div className="flex flex-col gap-4 max-w-[589px] text-center md:text-left">
+          <div className="flex flex-col gap-4 max-w-[589px] text-center md:text-left z-20">
             <h6 className="text-pink-600 text-sm font-bold font-['Inter'] leading-snug tracking-wide">
               Oferta especial
             </h6>

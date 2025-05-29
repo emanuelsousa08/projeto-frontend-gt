@@ -1,27 +1,23 @@
-const ProductCard = ({ image, name, price, priceDiscount }) => {
+const ProductCard = ({ image, category, name, price, priceDiscount, showDiscount }) => {
   return (
-    <div className="flex flex-col">
-      {/* Imagem do produto */}
-      <div className="w-[292px] h-[321px] overflow-hidden">
-        <img src={image || "/placeholder.svg"} alt={name} className="w-full h-full object-cover" />
+    <div className="flex flex-col items-start ml-5 lg:ml-20">
+      <div className="bg-white p-4 relative">
+        {showDiscount && (
+          <span className="absolute top-2 left-2 label-discount text-xs font-bold px-2 py-1 rounded-full">30% OFF</span>
+        )}
+        <img src={image || "/placeholder.svg"} alt={name} className="object-contain mx-auto h-[134px]" />
       </div>
 
-      {/* Nome do produto */}
-      <h3 className="mt-3 text-lg font-medium">{name}</h3>
-
-      {/* Preços */}
-      <div className="mt-2 flex items-center gap-2">
+      <h5 className="text-xs text-light-gray mt-2">{category}</h5>
+      <h3 className="text-lg font-stretch-normal text-dark-gray-2">{name}</h3>
+      <div className="my-2 flex items-center gap-2">
         {priceDiscount ? (
           <>
-            {/* Preço original com linha cortando */}
-            <span className="text-gray-400 line-through text-2xl">{price}</span>
-
-            {/* Preço com desconto */}
-            <span className="text-gray-800 text-2xl font-medium">{priceDiscount}</span>
+            <span className="text-light-gray-2 line-through text-2xl mb-4">{price}</span>
+            <span className="text-dark-gray text-2xl font-medium mb-4">{priceDiscount}</span>
           </>
         ) : (
-          /* Apenas preço normal */
-          <span className="text-gray-800 text-2xl font-medium">{price}</span>
+          <span className="text-dark-gray text-2xl font-medium mb-4">{price}</span>
         )}
       </div>
     </div>
