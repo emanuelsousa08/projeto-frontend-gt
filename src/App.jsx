@@ -21,7 +21,7 @@ function App() {
               <ProductListingPage />
             </Layout>
           } />
-          <Route path="/product/:id" element={
+          <Route path="/category" element={
             <Layout>
               <ProductViewPage />
             </Layout>
