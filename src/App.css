@@ -283,10 +283,9 @@ nav ul li a.active::after {
   }
 }
 
-/*Tipografia*/
 
 
-/*icones das coleções*/
+/*icones das coleções - segunda section da homepage*/
 
 .icons-collection {
   fill: var(--dark-gray);
@@ -386,6 +385,48 @@ nav ul li a.active::after {
 .icon-button:disabled {
   background-color: var(--light-gray-2);
   color: var(--light-gray-3);
+}
+
+.size-button{
+  width: 48px;
+  height: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 4px;
+  border: 1px inside;
+  background-color: white;
+  color: var(--dark-gray);
+}
+
+.size-button:hover{
+  background-color: var(--primary);
+  color: white;
+  animation: 300ms ease-out;
+  cursor: pointer;
+}
+
+.size-button.ativo{
+  background-color: var(--primary);
+  color: white;
+}
+
+.color-button{
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  border-spacing: 30px;
+  border-color: var(--light-gray-2);
+}
+
+.color-button:hover{
+  border-color: var(--primary);
+  animation: 300ms ease-out;
+  cursor: pointer;
+}
+
+.color-button.ativo{
+  border-color: var(--primary);
+  border-spacing: 30px;
 }
 
 .radio {

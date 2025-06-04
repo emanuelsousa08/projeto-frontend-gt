@@ -5,20 +5,20 @@ import ProductOptions from "../components/ProductOptions";
 
 export default function ProductPage() {
   const product = {
-    name: "Tênis Esportivo",
+    name: "Tênis Nike Revolution 6 Next Nature Masculino",
     reference: "REF123456",
     stars: 4,
     rating: 138,
     price: "R$ 499,90",
-    priceDiscount: "R$ 399,90",
+    priceDiscount: "R$ 399,99",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     images: [
-      "/product-image-1.jpeg",
-      "/product-image-2.jpeg",
-      "/product-image-3.jpeg",
-      "/product-image-4.jpeg",
-      "/product-image-5.jpeg"
+      "/produc-image-1.jpeg",
+      "/produc-image-2.jpeg",
+      "/produc-image-3.jpeg",
+      "/produc-image-4.jpeg",
+      "/produc-image-5.jpeg"
     ],
     options: {
       sizes: ["36", "37", "38", "39", "40", "41", "42"],
