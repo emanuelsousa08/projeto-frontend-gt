@@ -1,5 +1,6 @@
 import React from "react";
 import StarIcon from "../assets/star-icon.svg";
+import StarRating from "./StarRating";
 
 const BuyBox = ({
   name,
@@ -11,55 +12,40 @@ const BuyBox = ({
   description,
   children,
 }) => {
-  const totalStars = 5;
-  const filledStars = Math.round(stars);
-  const emptyStars = totalStars - filledStars;
+  // const totalStars = 5;
+  // const filledStars = Math.round(stars);
+  // const emptyStars = totalStars - filledStars;
   return (
     <>
       <div className="flex flex-col gap-4">
         {/*NOME DO PRODUTO */}
-        <h1 className="w-96 justify-start font-bold font-['Inter'] leading-9 tracking-wide text-dark-gray">
+        <h1 className="w-96 justify-start text-[32px] font-bold font-['Inter'] leading-9 tracking-wide">
           {name}
         </h1>
         {/*REFERÊNCIA DO PRODUTO */}
-        <span className="w-96 h-5 justify-center text-dark-gray-3 text-xs font-medium font-['Inter'] leading-none tracking-wide">
+        <span className="w-96 h-5 justify-center text-dark-gray-3 text-[12px] font-medium font-['Inter'] leading-none tracking-wide">
           {reference}
         </span>
         {/*ESTRELAS/AVALIAÇÃO */}
         <div className="flex items-center gap-2">
           <div className="flex gap-[2px]">
-            {[...Array(filledStars)].map((_, i) => (
-              <img
-                key={"filled-" + i}
-                src={StarIcon}
-                alt="Star"
-                className="w-4 h-4 rounded bg-warning p-[2px]"
-              />
-            ))}
-            {[...Array(emptyStars)].map((_, i) => (
-              <img
-                key={"empty-" + i}
-                src={StarIcon}
-                alt="Empty Star"
-                className="w-4 h-4 rounded bg-white p-[2px] border border-warning"
-              />
-            ))}
+            <StarRating fill={stars} />
           </div>
-          <span className="text-sm font-medium font-['Inter] leading-enug tracking-tight text-light-gray-2">
-            {rating}
+          <span className="text-sm font-medium font-['Inter] leading-enug tracking-tight text-light-gray">
+            {rating} avaliações
           </span>
         </div>
         {/*PREÇO */}
         <div className="w-24 justify-start flex items-center gap-4">
           <span
-            className={`text-dark-gray-2 text-[32px] text-3xl font-bold font-['Inter'] leading-9 tracking-wide
-            ${priceDiscount ? "line-through text-light-gray-2" : "text-light-gray-2"}`}
+            className={`text-dark-gray text-[32px] text-3xl font-bold font-['Inter'] leading-9 tracking-wide
+            ${!priceDiscount ? " " : "text-dark-gray"}`}
           >
-            {price}
+            {priceDiscount}
           </span>
           {priceDiscount && (
             <span className="text-[16px] text-light-gray-2 text-base font-normal font-['Inter'] line-through leading-7 tracking-wide">
-              {priceDiscount}
+              {price}
             </span>
           )}
         </div>
