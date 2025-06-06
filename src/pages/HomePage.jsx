@@ -1,4 +1,4 @@
-import { href } from "react-router-dom";
+import { href, Link } from "react-router-dom";
 import CardDestaque from "../components/CardDestaque";
 import IconDestaque from "../components/IconDestaque";
 import Section from "../components/Section";
@@ -144,7 +144,7 @@ const HomePage = () => {
         {/* PRIMEIRA SECTION DPOIS DO CARROSEL*/}
         <Section>
           <div className="h-100 w-full px-4 md:px-0">
-            <div className="lex justify-center text-dark-gray-2 text-2xl font-bold font-['Inter'] leading-9 tracking-wide mb-6">
+            <div className="flex justify-center text-dark-gray-2 text-2xl font-bold font-['Inter'] leading-9 tracking-wide mt-24 mb-6">
               Coleções em destaque
             </div>
             <div className="flex flex-col md:flex-row gap-4 md:gap-6 overflow-x-auto md:overflow-visible justify-center">
@@ -163,7 +163,7 @@ const HomePage = () => {
         <Section className="w-full">
           <div className="w-full">
             <div className="h-50 flex flex-col items-center w-full md:px-9">
-              <div className="flex justify-center text-dark-gray-2 text-2xl font-bold font-['Inter'] leading-9 tracking-wide mb-6">
+              <div className="flex justify-center text-dark-gray-2 text-2xl font-bold font-['Inter'] leading-9 tracking-wide mt-4 mb-6">
                 Coleções em destaque
               </div>
               <div className="flex flex-col md:flex-row gap-3 md:gap-5 overflow-x-auto md:overflow-visible object-contain px-4">
@@ -177,12 +177,12 @@ const HomePage = () => {
 
         <Section>
           <div className="container mx-auto w-4/5">
-            <div className="w-[88%] ml-20 mb-6 items-center">
+            <div className="w-[88%] ml-20 mt-8 mb-8 items-center">
               <div className="flex justify-between items-center">
                 <h5 className="text-dark-gray-2 text-2xl font-bold">Produtos em alta</h5>
-                <a className="text-sm text-primary cursor-pointer font-normal flex items-center gap-1">
+                <Link to={'/products'} className="text-sm text-primary cursor-pointer font-normal flex items-center gap-1">
                   Ver todos <img src="./src/assets/Right-24px.svg" />
-                </a>
+                </Link>
               </div>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-0">
@@ -201,7 +201,7 @@ const HomePage = () => {
           </div>
         </Section>
 
-        <div className="w-full max-w-[1440px] h-[553px] bg-white flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-10 gap-10 md:h-[553px] mx-auto">
+        <div className="w-full max-w-[1440px] h-[553px] bg-white flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-10 gap-10 md:h-[553px] mx-auto my-20">
           {/* ESQUERDA - imagem com o fundo circular */}
           <div className="relative w-full flex justify-center md:justify-start z-10">
             <div className="w-[300px] h-[300px] md:w-[466px] md:h-[466px] bg-gradient-to-b from-violet-700/25 to-white/0 rounded-full absolute top-0 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 z-0" />
@@ -226,7 +226,7 @@ const HomePage = () => {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip
             </p>
-            <button className="primary-button w-fit mx-auto md:mx-0 mt-2">Ver Oferta</button>
+            <button className="primary-button w-full lg:w-fit mx-auto md:mx-0 mt-2">Ver Oferta</button>
           </div>
         </div>
       </main>
