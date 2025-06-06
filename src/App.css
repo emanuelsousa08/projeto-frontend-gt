@@ -16,7 +16,7 @@
   --error: #ee4266;
   --success: #52ca76;
   --warning: #f6aa1c;
-  --label: #E7FF86;
+  --label: #e7ff86;
   --main: #f9f8fe;
 
   --dark-gray: #1f1f1f;
@@ -82,7 +82,7 @@
   background-color: var(--white);
 }
 
-.bg-main{
+.bg-main {
   background-color: var(--main);
 }
 
@@ -283,8 +283,6 @@ nav ul li a.active::after {
   }
 }
 
-
-
 /*icones das coleções - segunda section da homepage*/
 
 .icons-collection {
@@ -299,7 +297,6 @@ nav ul li a.active::after {
   cursor: pointer;
   transform: translateY(-5px);
 }
-
 
 /*Botões*/
 
@@ -387,7 +384,7 @@ nav ul li a.active::after {
   color: var(--light-gray-3);
 }
 
-.size-button{
+.size-button {
   width: 48px;
   height: 48px;
   display: flex;
@@ -398,19 +395,19 @@ nav ul li a.active::after {
   color: var(--dark-gray);
 }
 
-.size-button:hover{
+.size-button:hover {
   background-color: var(--primary);
   color: white;
   animation: 300ms ease-out;
   cursor: pointer;
 }
 
-.size-button.ativo{
+.size-button.ativo {
   background-color: var(--primary);
   color: white;
 }
 
-.color-button{
+.color-button {
   width: 39px;
   height: 39px;
   border-radius: 50%;
@@ -418,13 +415,13 @@ nav ul li a.active::after {
   border-color: var(--light-gray-2);
 }
 
-.color-button:hover{
+.color-button:hover {
   border-color: var(--primary);
   animation: 300ms ease-out;
   cursor: pointer;
 }
 
-.color-button.ativo{
+.color-button.ativo {
   border-color: var(--primary);
   border-spacing: 30px;
 }
@@ -511,4 +508,17 @@ nav ul li a.active::after {
   width: 22px;
   height: 22px;
   accent-color: var(--primary);
+}
+
+.social-icon {
+  padding: 0.5rem;
+  transition: all 300ms ease-out;
+  z-index: 1;
+}
+
+.social-icon:hover {
+  background-color: var(--primary);
+  border-radius: 100%;
+  cursor: pointer;
+  z-index: 0;
 }

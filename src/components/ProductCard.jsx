@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const ProductCard = ({ image, category, name, price, priceDiscount, showDiscount }) => {
   return (
     <div className="flex flex-col items-start ml-5 lg:ml-20">
@@ -5,11 +7,15 @@ const ProductCard = ({ image, category, name, price, priceDiscount, showDiscount
         {showDiscount && (
           <span className="absolute top-2 left-2 label-discount text-xs font-bold px-2 py-1 rounded-full">30% OFF</span>
         )}
-        <img src={image || "/placeholder.svg"} alt={name} className="object-contain mx-auto h-[134px]" />
+        <Link to={'/productview'}>
+          <img src={image || "/placeholder.svg"} alt={name} className="object-contain mx-auto h-[134px] cursor-pointer" />
+        </Link>
       </div>
 
       <h5 className="text-xs text-light-gray mt-2">{category}</h5>
-      <h3 className="text-lg font-stretch-normal text-dark-gray-2">{name}</h3>
+      <Link to={'/productview'}>
+        <h3 className="text-lg font-stretch-normal text-dark-gray-2 cursor-pointer">{name}</h3>
+      </Link>
       <div className="my-2 flex items-center gap-2">
         {priceDiscount ? (
           <>
