@@ -20,24 +20,6 @@ const HomePage = () => {
     },
   ];
 
-  const arrayIconDestaque = [
-    {
-      title: "Camisas",
-      img: "/t-shirt.svg",
-    },
-    {
-      title: "Calças",
-      img: "/pants.svg",
-    },
-    {
-      title: "Bonés",
-      img: "/hat.svg",
-    },
-    {
-      title: "Headphones",
-      img: "/headphone.svg",
-    },
-  ];
 
   const title = "Melhores ofertas personalizadas";
   const titleAlign = "left";
@@ -117,7 +99,7 @@ const HomePage = () => {
     <>
       <main className="bg-main">
         <Section>
-          <div className="w-full h-[681px] bg-light-gray-3 flex items-center justify-between px-24">
+           {/* <div className="w-full h-[681px] bg-light-gray-3 flex items-center justify-between px-24">
             <div className="max-w-[600px] flex flex-col gap-6">
               <div
                 className={`text-amber-500 text-base font-bold font-['Inter'] leading-normal tracking-wide
@@ -139,15 +121,15 @@ const HomePage = () => {
                 Ver ofertas
               </button>
             </div>
-          </div>
+          </div> */}
         </Section>
         {/* PRIMEIRA SECTION DPOIS DO CARROSEL*/}
         <Section>
-          <div className="h-100 w-full px-4 md:px-0">
-            <div className="flex justify-center text-dark-gray-2 text-2xl font-bold font-['Inter'] leading-9 tracking-wide mt-24 mb-6">
+          <div className="w-full px-4 md:px-0">
+            <div className="flex text-dark-gray-2 text-2xl font-bold font-['Inter'] leading-9 tracking-wide lg:ml-83 mt-24 mb-6">
               Coleções em destaque
             </div>
-            <div className="flex flex-col md:flex-row gap-4 md:gap-6 overflow-x-auto md:overflow-visible justify-center">
+            <div className="flex flex-col md:flex-row gap-6 overflow-x-auto md:overflow-visible items-center justify-center">
               {arrayDestaque.map((item, index) => (
                 <CardDestaque
                   key={index}
@@ -160,24 +142,24 @@ const HomePage = () => {
         </Section>
 
         {/*SEGUNDA SECTION DEPOIS DA PRIMEIRA*/}
-        <Section className="w-full">
+        <Section>
           <div className="w-full">
-            <div className="h-50 flex flex-col items-center w-full md:px-9">
+            <div className="flex flex-col items-center w-full py-8 md:px-9">
               <div className="flex justify-center text-dark-gray-2 text-2xl font-bold font-['Inter'] leading-9 tracking-wide mt-4 mb-6">
                 Coleções em destaque
               </div>
-              <div className="flex flex-col md:flex-row gap-3 md:gap-5 overflow-x-auto md:overflow-visible object-contain px-4">
-                {arrayIconDestaque.map((item, idx) => (
-                  <IconDestaque key={idx} {...item} />
-                ))}
+              <div className="w-full max-w-screen-xl mx-auto px-4">
+                <div className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory md:overflow-visible">
+                  <IconDestaque />
+                </div>
               </div>
             </div>
           </div>
         </Section>
 
         <Section>
-          <div className="container mx-auto w-4/5">
-            <div className="w-[88%] ml-20 mt-8 mb-8 items-center">
+          <div className="container mx-auto w-3/4">
+            <div className="my-8 mx-15 lg:my-8 justify-center items-center">
               <div className="flex justify-between items-center">
                 <h5 className="text-dark-gray-2 text-2xl font-bold">Produtos em alta</h5>
                 <Link to={'/products'} className="text-sm text-primary cursor-pointer font-normal flex items-center gap-1">
@@ -201,12 +183,12 @@ const HomePage = () => {
           </div>
         </Section>
 
-        <div className="w-full max-w-[1440px] h-[553px] bg-white flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-10 gap-10 md:h-[553px] mx-auto my-20">
+        <div className="w-full max-w-[1440px] h-[553px] bg-white flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-10 gap-6 md:h-[553px] mx-auto my-20">
           {/* ESQUERDA - imagem com o fundo circular */}
           <div className="relative w-full flex justify-center md:justify-start z-10">
             <div className="w-[300px] h-[300px] md:w-[466px] md:h-[466px] bg-gradient-to-b from-violet-700/25 to-white/0 rounded-full absolute top-0 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 z-0" />
             <img
-              className="w-[250px] h-auto md:w-[573px] md:h-80 relative z-10"
+              className="w-[250px] h-auto md:w-[573px] md:h-80 object-contain relative z-10"
               src="/air-jordan-1.PNG"
               alt="Air Jordan"
             />

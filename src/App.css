@@ -212,10 +212,11 @@ a.bg-primary {
   padding: 0.7rem 2rem;
   border-radius: 0.5rem;
   background-color: var(--primary);
+  transition: all 300ms ease-in-out;
 }
 
 a.bg-primary:hover {
-  background-color: var(--tertiary);
+  background-color: var(--error);
   cursor: pointer;
 }
 
@@ -286,13 +287,11 @@ nav ul li a.active::after {
 /*icones das coleções - segunda section da homepage*/
 
 .icons-collection {
-  fill: var(--dark-gray);
-  transition: all 300ms ease-out;
-  height: 50px;
-  width: 50px;
+  fill: var(--light-gray);
+  transition: all 300ms ease-in-out;
 }
 
-.icons-collection:hover {
+.group:hover .icons-collection {
   fill: var(--primary);
   cursor: pointer;
   transform: translateY(-5px);
@@ -307,12 +306,12 @@ nav ul li a.active::after {
   left: 20px;
   border-radius: 8px;
   background-color: var(--primary);
-  color: var(--light-gray-3);
+  color: var(--white);
 }
 
 .primary-button:hover {
   animation: 300ms ease-out;
-  background-color: var(--tertiary);
+  background-color: var(--error);
   cursor: pointer;
 }
 
@@ -337,7 +336,7 @@ nav ul li a.active::after {
 }
 
 .secondary-button:disabled {
-  background-color: white;
+  background-color: var(--white);
   color: var(--primary);
   border-color: var(--primary);
 }
@@ -349,7 +348,7 @@ nav ul li a.active::after {
   left: 20px;
   border-radius: 8px;
   background-color: var(--warning);
-  color: var(--light-gray-3);
+  color: var(--white);
 }
 
 .shop-button:hover {
@@ -370,7 +369,7 @@ nav ul li a.active::after {
   left: 20px;
   border-radius: 8px;
   background-color: var(--primary);
-  color: var(--light-gray-3);
+  color: var(--white);
 }
 
 .icon-button:hover {
@@ -397,14 +396,14 @@ nav ul li a.active::after {
 
 .size-button:hover {
   background-color: var(--primary);
-  color: white;
+  color: var(--white);
   animation: 300ms ease-out;
   cursor: pointer;
 }
 
 .size-button.ativo {
   background-color: var(--primary);
-  color: white;
+  color: var(--white);
 }
 
 .color-button {
@@ -480,7 +479,7 @@ nav ul li a.active::after {
 }
 /*a div do filtro, mas vou ter que tirar*/
 .filter-group {
-  background-color: white;
+  background-color: var(--white);
   width: 308px;
   padding: 16px;
 }
@@ -521,4 +520,14 @@ nav ul li a.active::after {
   border-radius: 100%;
   cursor: pointer;
   z-index: 0;
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
