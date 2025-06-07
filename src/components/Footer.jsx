@@ -69,7 +69,7 @@ const Footer = () => {
             nisi iste, enim explicabo aliquid maxime ea illo ad eius laborum
             odit quis.
           </p>
-          <div className="flex ml-2 lg:ml-2 mt-6 gap-5 lg:gap-10 rounded-full">
+          <div className="flex w-10 h-10 ml-2 lg:ml-2 mt-6 gap-5 lg:gap-10 rounded-full">
             <img
               src="./src/assets/facebook.svg"
               alt="facebook-icon"
