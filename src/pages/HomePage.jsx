@@ -126,9 +126,9 @@ const HomePage = () => {
         {/* PRIMEIRA SECTION DPOIS DO CARROSEL*/}
         <Section>
           <div className="w-full px-4 md:px-0">
-            <div className="flex text-dark-gray-2 text-2xl font-bold font-['Inter'] leading-9 tracking-wide lg:ml-83 mt-24 mb-6">
+            <h4 className="flex text-dark-gray-2 text-2xl font-bold font-['Inter'] leading-9 tracking-wide lg:ml-20 mt-24 mb-6">
               Coleções em destaque
-            </div>
+            </h4>
             <div className="flex flex-col md:flex-row gap-6 overflow-x-auto md:overflow-visible items-center justify-center">
               {arrayDestaque.map((item, index) => (
                 <CardDestaque
@@ -188,7 +188,7 @@ const HomePage = () => {
           <div className="relative w-full flex justify-center md:justify-start z-10">
             <div className="w-[300px] h-[300px] md:w-[466px] md:h-[466px] bg-gradient-to-b from-violet-700/25 to-white/0 rounded-full absolute top-0 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 z-0" />
             <img
-              className="w-[250px] h-auto md:w-[573px] md:h-80 object-contain relative z-10"
+              className="w-[250px] h-auto md:w-[480px] md:h-90 object-contain relative z-10"
               src="/air-jordan-1.PNG"
               alt="Air Jordan"
             />
