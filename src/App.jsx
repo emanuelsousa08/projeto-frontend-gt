@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage'
 import ProductListingPage from './pages/ProductListingPage'
 import ProductViewPage from './pages/ProductViewPage'
 import PageLogin from './pages/PageLogin'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
             <Layout>
               <PageLogin />
             </Layout>
+          } />
+          <Route path="*" element={
+            <NotFound />
           } />
         </Routes>
       </Router>
