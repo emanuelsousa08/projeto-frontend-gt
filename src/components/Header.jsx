@@ -46,18 +46,18 @@ const Header = () => {
             </div>
 
             <div className="hidden lg:flex gap-4">
-              <a
-                href="#"
+              <Link
+                to={'/register'}
                 className="underline text-dark-gray-2 font-normal px-3 py-2"
               >
                 Cadastre-se
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to={'/login'}
                 className="bg-primary text-white font-bold px-3 py-2 rounded"
               >
                 Entrar
-              </a>
+              </Link>
             </div>
 
             <div className="relative cursor-pointer mx-auto md:ml-2 lg:ml-5 right-1">

@@ -6,7 +6,9 @@ import HomePage from './pages/HomePage'
 import ProductListingPage from './pages/ProductListingPage'
 import ProductViewPage from './pages/ProductViewPage'
 import PageLogin from './pages/PageLogin'
+import PageRegister from './pages/PageRegister'
 import NotFound from './pages/NotFound'
+
 
 function App() {
   return (
@@ -33,6 +35,11 @@ function App() {
               <PageLogin />
             </Layout>
           } />
+          <Route path="/register" element={
+            <Layout>
+              <PageRegister />
+            </Layout>
+          }/>
           <Route path="*" element={
             <NotFound />
           } />
