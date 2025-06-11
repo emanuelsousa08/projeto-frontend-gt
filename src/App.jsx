@@ -5,6 +5,7 @@ import Layout from './pages/Layout'
 import HomePage from './pages/HomePage'
 import ProductListingPage from './pages/ProductListingPage'
 import ProductViewPage from './pages/ProductViewPage'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
             <Layout>
               <ProductViewPage />
             </Layout>
+          } />
+          <Route path="*" element={
+            <NotFound />
           } />
         </Routes>
       </Router>

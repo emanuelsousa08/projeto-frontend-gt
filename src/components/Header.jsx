@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Logo from "./Logo";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +21,9 @@ const Header = () => {
           </div>
 
           <div className="flex items-center mx-4 scale-75 lg:scale-100 lg:py-7">
-            <Logo location="header" />
+            <Link to="/">
+              <Logo location="header" />
+            </Link>
           </div>
 
           <div className="hidden lg:flex relative w-full max-w-lg pl-6">
@@ -92,10 +94,10 @@ const Header = () => {
                 <NavLink to="/products" onClick={() => setIsMenuOpen(false)}>
                   Produtos
                 </NavLink>
-                <NavLink to="/notfound" onClick={() => setIsMenuOpen(false)}>
+                <NavLink to="/categories" onClick={() => setIsMenuOpen(false)}>
                   Categorias
                 </NavLink>
-                <NavLink to="/notfound" onClick={() => setIsMenuOpen(false)}>
+                <NavLink to="/my-orders" onClick={() => setIsMenuOpen(false)}>
                   Meus Pedidos
                 </NavLink>
               </nav>
@@ -119,8 +121,8 @@ const Header = () => {
             <ul className="flex overflow-x-auto whitespace-nowrap gap-8 py-1">
               <li><NavLink to="/">Home</NavLink></li>
               <li><NavLink to="/products">Produtos</NavLink></li>
-              <li><NavLink to="/notfound">Categorias</NavLink></li>
-              <li><NavLink to="/notfound">Meus Pedidos</NavLink></li>
+              <li><NavLink to="/categories">Categorias</NavLink></li>
+              <li><NavLink to="/my-orders">Meus Pedidos</NavLink></li>
             </ul>
           </div>
         </nav>
