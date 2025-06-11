@@ -5,6 +5,7 @@ import Layout from './pages/Layout'
 import HomePage from './pages/HomePage'
 import ProductListingPage from './pages/ProductListingPage'
 import ProductViewPage from './pages/ProductViewPage'
+import PageLogin from './pages/PageLogin'
 
 function App() {
   return (
@@ -24,6 +25,11 @@ function App() {
           <Route path="/productview" element={
             <Layout>
               <ProductViewPage />
+            </Layout>
+          } />
+          <Route path="/login" element={
+            <Layout>
+              <PageLogin />
             </Layout>
           } />
         </Routes>
