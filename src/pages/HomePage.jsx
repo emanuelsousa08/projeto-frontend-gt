@@ -3,6 +3,7 @@ import CardDestaque from "../components/CardDestaque";
 import IconDestaque from "../components/IconDestaque";
 import Section from "../components/Section";
 import ProductCard from "../components/ProductCard";
+import Carousel from "../components/Carousel";
 
 const HomePage = () => {
   const arrayDestaque = [
@@ -21,12 +22,46 @@ const HomePage = () => {
   ];
 
 
-  const title = "Melhores ofertas personalizadas";
-  const titleAlign = "left";
-  const link = {
-    text: "Queima de estoque da Nike🔥",
-    href: "www.google.com",
-  };
+const slidesData = [
+  {
+    label: "Melhores ofertas personalizadas",
+    title: "Queima de estoque Nike 🔥",
+    text: "Adquira já um de nossos modelos e exale estilo!",
+    image: "/white-red-nike.png",
+    buttonText: "Ver Ofertas",
+    backgroundColor: "bg-slide-1",
+    labelColor: "text-warning",
+    titleColor: "text-dark-gray",
+    textColor: "text-dark-gray-2",
+    highlight: true,
+    onButtonClick: () => console.log("Ver ofertas Nike")
+  },
+  {
+    label: "Novidades em sneakers",
+    title: "Nike Air Jordan 2",
+    text: "O clássico que nunca sai de moda, agora com novas cores.",
+    image: "/ai-jordan-2.png",
+    buttonText: "Ver Mais",
+    backgroundColor: "bg-slide-2",
+    labelColor: "text-error",
+    titleColor: "text-dark-gray",
+    textColor: "text-dark-gray-2",
+    onButtonClick: () => console.log("Ação ver mais")
+  },
+  {
+    label: "Lançamento exclusivo",
+    title: "Nike Air Force 1 Classic",
+    text: "O tênis mais icônico da Nike em sua versão clássica.",
+    image: "/nike-air-force.png",
+    buttonText: "Explorar",
+    backgroundColor: "bg-slide-3",
+    labelColor: "text-primary",
+    titleColor: "text-dark-gray",
+    textColor: "text-dark-gray-2",
+    highlight: true,
+    onButtonClick: () => console.log("Explorar Air Force")
+  }
+];
 
   const products = [
     {
@@ -99,29 +134,13 @@ const HomePage = () => {
     <>
       <main className="bg-main">
         <Section>
-           {/* <div className="w-full h-[681px] bg-light-gray-3 flex items-center justify-between px-24">
-            <div className="max-w-[600px] flex flex-col gap-6">
-              <div
-                className={`text-amber-500 text-base font-bold font-['Inter'] leading-normal tracking-wide
-                ${
-                  titleAlign === "center" ? "justify-start" : "justify-between"
-                }`}
-              >
-                {title}
-              </div>
-              <h1 className="text-dark-gray text-6xl font-extrabold leading-[66px] tracking-wide">
-                {link && <a href={link.href}>{link.text}</a>}
-              </h1>
-              <div className="w-[495px] justify-start text-zinc-700 text-lg font-normal font-['Inter'] leading-loose tracking-wide">
-                Consequat culpa exercitation mollit nisi excepteur do do tempor
-                laboris eiusmod irure consectetur.
-              </div>
-
-              <button className="primary-button text-neutral-100 font-bold text-base tracking-wide">
-                Ver ofertas
-              </button>
-            </div>
-          </div> */}
+           <Carousel 
+              width="w-full"
+              height="681" 
+              radius="0px"
+              slides={slidesData}
+              className=""
+            />
         </Section>
         {/* PRIMEIRA SECTION DPOIS DO CARROSEL*/}
         <Section>
@@ -159,7 +178,7 @@ const HomePage = () => {
 
         <Section>
           <div className="container mx-auto w-3/4">
-            <div className="my-8 mx-15 lg:my-8 justify-center items-center">
+            <div className="my-8 mx-20 lg:my-8 justify-center items-center">
               <div className="flex justify-between items-center">
                 <h5 className="text-dark-gray-2 text-2xl font-bold">Produtos em alta</h5>
                 <Link to={'/products'} className="text-sm text-primary cursor-pointer font-normal flex items-center gap-1">

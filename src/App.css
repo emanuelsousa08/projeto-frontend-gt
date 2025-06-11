@@ -86,6 +86,18 @@
   background-color: var(--main);
 }
 
+.bg-slide-1{
+  background-color: var(--light-gray-3);
+}
+
+.bg-slide-2{
+  background-color: #c8c9f7;
+}
+
+.bg-slide-3{
+  background-color: #dafaea;
+}
+
 .text-primary {
   color: var(--primary);
 }
