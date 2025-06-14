@@ -9,7 +9,7 @@ const Login = () => {
           <h3 className="w-[523px] justify-start text-dark-gray text-3xl font-bold font-['Inter'] leading-9 tracking-wide">
             Acesse sua conta
           </h3>
-          <div className="text-start justify-start">
+          <div className="text-start self-stretch justify-start items-start gap-6">
             <span class="py-4 text-dark-gray-2 text-base font-normal font-['Inter'] leading-7 tracking-wide">
               Novo cliente? Então registre-se{" "}
               <Link
@@ -20,23 +20,23 @@ const Login = () => {
               </Link>
               .
             </span>
-            <div className="w-full max-w-[583px] mx-auto px-4 py-8 bg-white rounded-lg flex flex-col items-start gap-6">
-            <form className="p-4 justify-start">
-              <label className="text-dark-gray font-bold font-['Inter'] leading-7 tracking-wide">
+            <div>
+            <form className="w-full max-w-[583px] mx-auto px-4 py-2 bg-white rounded-lg flex flex-col items-start">
+              <label className="text-dark-gray mt-6 text-nowrap font-bold font-['Inter'] leading-7 tracking-wide">
                 Login*
               </label>
               <input
                 type="text"
-                className="w-full max-w-md px-4 py-2 border border-light-gray-2 rounded-md text-dark-gray placeholder:text-light-gray-2 focus:outline-pink-500 focus:outline-offset-2 trasition"
+                className="w-full max-w-[583px] mb-6 px-4 py-2 border border-light-gray-2 rounded-md text-dark-gray placeholder:text-light-gray-2 focus:outline-pink-500 focus:outline-offset-2 transition"
                 placeholder="Digite seu e-mail ou CPF..."
                 required
               />
-              <label className="text-dark-gray font-bold font-['Inter'] leading-7 tracking-wide">
+              <label className="text-dark-gray text-nowrap font-bold font-['Inter'] leading-7 tracking-wide">
                 Senha*
               </label>
               <input
                 type="text"
-                className="w-full max-w-md px-4 py-2 border border-light-gray-2 rounded-md text-dark-gray placeholder:text-light-gray-2 focus:outline-pink-500 focus:outline-offset-2 trasition"
+                className="w-full max-w-[583px] mb-6 px-4 py-2 border border-light-gray-2 rounded-md text-dark-gray placeholder:text-light-gray-2 focus:outline-pink-500 focus:outline-offset-2 transition"
                 placeholder="Digite sua senha..."
                 required
               />
@@ -48,7 +48,7 @@ const Login = () => {
                   Esqueci minha senha
                 </Link>
               </div>
-              <button className="w-full primary-button">Acessar Conta</button>
+              <button className="w-full max-w-[583px] primary-button">Acessar Conta</button>
             </form>
             </div>
             <div className="flex gap-4 py-2 px-2 text-dark-gray font-base font-[Inter] leading-7 tracking-wide">

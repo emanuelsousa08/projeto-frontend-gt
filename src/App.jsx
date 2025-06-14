@@ -7,6 +7,7 @@ import ProductListingPage from './pages/ProductListingPage'
 import ProductViewPage from './pages/ProductViewPage'
 import PageLogin from './pages/PageLogin'
 import PageRegister from './pages/PageRegister'
+import FormRegister from './pages/FormRegister'
 import NotFound from './pages/NotFound'
 
 
@@ -38,6 +39,11 @@ function App() {
           <Route path="/register" element={
             <Layout>
               <PageRegister />
+            </Layout>
+          }/>
+          <Route path="/formregister" element={
+            <Layout>
+              <FormRegister />
             </Layout>
           }/>
           <Route path="*" element={
