@@ -1,6 +1,7 @@
 import { useCart } from '../Context/CartProvider';
 import { useState } from 'react';
 import { FaQrcode,FaCreditCard, FaMoneyBill } from "react-icons/fa";
+import { formatPrice } from '../utils/formatPrice';
 
 const Pedidos = () => {
     const {cartItems, removeFromCart} = useCart();
@@ -8,11 +9,11 @@ const Pedidos = () => {
     const [paymentOption, setPaymentOption] = useState(false);
     const [successAlert, setSuccessAlert] = useState(false);
     const handleDelete = () => {
-        const productId = cartItems[itemToDelete]?.id;
-        if(productId !== undefined){
-            removeFromCart(productId)
+        // const productId = cartItems[itemToDelete]?.id;
+        if(itemToDelete !== null){
+            removeFromCart(itemToDelete);
+            setItemToDelete(null);
         }
-        setItemToDelete(null);
     };
 
     const handleOverlayClick = (e, closeFunc) => {
@@ -31,9 +32,18 @@ const Pedidos = () => {
     //aplica desconto no carrinho todo
     const total = cartItems.reduce((sum,item)=>{
         if(!item || typeof item.price !== 'number') return sum;
-        return sum + item.price * 0,7;
-    }, 0)
-
+        return sum + item.price * 0.7;
+    }, 0);
+    // const total = cartItems.reduce((sum, item) => {
+    //     const price = typeof item?.price === 'string' 
+    //         ? Number(item.price.replace(/[^0-9.-]+/g, '')) 
+    //         : item?.price || 0;
+    //     return sum + (price * 0.7); // 30% de desconto
+    // }, 0);
+//     const total = cartItems.reduce((sum, item) => {
+//         const price = Number(item?.price) || 0; // Garante número
+//         return sum + (price * 0.7); // 30% de desconto
+// }, 0);
     return ( 
         <>
         <div className="px-10 py-6 relative">
@@ -48,17 +58,18 @@ const Pedidos = () => {
             ): (
                 <>
                 <ul className="space-y-4">
-                    {cartItems.map((item, idx) => (
-                        <li key={item?.id ?? idx} className="border p-4 rounded shadow-sm bg-white flex justify-between items-center">
+                    {cartItems.map((item) => (
+                        <li key={item.id} className="border p-4 rounded shadow-sm bg-white flex justify-between items-center">
                             <div>
-                                <p className="font-medium">{item?.title || "Produto sem título"}</p>
-                                <p className="text-sm text-dark-gray-3">{item?.category || "Categoria desconhecida"}</p>
+                                <p className="font-medium">{item.name || "Produto sem título"}</p>
+                                <p className="text-sm text-dark-gray-3">{item.category || "Categoria desconhecida"}</p>
                                 <span className="font-bold text-primary">
-                                    R${item?.price ? (item.price * 0.7).toFixed(2) : "0.00"}
+                                    R${typeof item?.price === 'number' ? (item.price * 0.7).toFixed(2) : "0.00"}
+                                    {/* R$ {formatPrice(item?.price * 0.7)} */}
                                 </span>
                             </div>
                             <button
-                            onClick={() => setItemToDelete(idx)}
+                            onClick={() => setItemToDelete(item.id)}
                             className="text-red-500 hover:text-red-700 font-medium"
                             >
                             Excluir
@@ -67,6 +78,7 @@ const Pedidos = () => {
                     ))}
                 </ul>
                 <div className="mt-6 text-right text-lg font-semibold text-primary">
+                    {/* Total: R$ {formatPrice(total)} */}
                     Total: R$ {total.toFixed(2)}
                 </div>
                 <div className="mt-6 flex justify-end">
@@ -121,20 +133,20 @@ const Pedidos = () => {
                                     <FaQrcode /> Pix
                                 </button>
                                 <button
-                                    onClick={handleSimulatePayment}
+                                    onClick={handleSimPayment}
                                     className="flex items-center justify-center gap-2 bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800"
                                 >
                                     <FaCreditCard /> Cartão de Crédito
                                 </button>
                                 <button
-                                    onClick={handleSimulatePayment}
+                                    onClick={handleSimPayment}
                                     className="flex items-center justify-center gap-2 bg-green-900 text-white px-4 py-2 rounded hover:bg-green-950"
                                 >
                                     <FaMoneyBill /> Dinheiro
                                 </button>
                             </div>
                             <button
-                                onClick={() => setShowPaymentOptions(false)}
+                                onClick={() => setPaymentOption(false)}
                                 className="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
                             >
                             Cancelar

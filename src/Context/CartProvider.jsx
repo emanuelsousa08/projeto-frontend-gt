@@ -20,6 +20,13 @@ export const CartProvider = ({ children }) => {
 
   // Adiciona um produto ao carrinho
   const addToCart = (product) => {
+    // if(!product.id){
+    //     //console.error("Produto sem ID válido:", product);
+    //     return;
+    // }
+    // if(typeof product.price === 'string'){
+    //     product.price = Number(product.price.replace(/\D/g, ''))
+    // }
     setCartItems((prev) => [...prev, product]);
   };
 
