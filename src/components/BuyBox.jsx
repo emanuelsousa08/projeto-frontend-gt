@@ -1,5 +1,5 @@
-import React from "react";
-import StarIcon from "../assets/star-icon.svg";
+import { useContext } from "react";
+import { useCart } from "../Context/CartProvider";
 import StarRating from "./StarRating";
 
 const BuyBox = ({
@@ -12,9 +12,11 @@ const BuyBox = ({
   description,
   children,
 }) => {
-  // const totalStars = 5;
-  // const filledStars = Math.round(stars);
-  // const emptyStars = totalStars - filledStars;
+  // const {addToCart} = useContext(useCart);
+  // const handleAddToCart = () => {
+  //   addToCart(product);
+  // }
+
   return (
     <>
       <div className="flex flex-col gap-4">
