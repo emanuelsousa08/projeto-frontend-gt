@@ -1,8 +1,8 @@
-# 👟 Drip Store - Projeto Front End do curso Geração Tech
+# 👟 Drip Store - Projeto Front End do curso Geração Tech 👕
 
 Este projeto é baseado em um e-commerce moderno de tênis e vestuário desenvolvido com React e TailwindCSS. O projeto simula uma loja online voltada para marcas como Nike, Adidas e outras do segmento urbano, oferecendo uma experiência de usuário fluida e responsiva. A estilização é baseada em um design Figma, demonstrando a implementação fiel de layouts profissionais.
 
-## ✨ Funcionalidades
+## 🔥 Funcionalidades
 
 - 🎨 Interface moderna e responsiva
 - ⚡ Performance otimizada com Vite
@@ -26,7 +26,7 @@ Antes de começar, certifique-se de ter instalado:
 - Node.js (versão 14 ou superior)
 - npm ou yarn
 
-## 🚀 Instalação
+## ⚙️ Instalação
 
 Clone o repositório e instale as dependências:
 
@@ -41,7 +41,7 @@ cd projeto-frontend-gt
 npm install
 ```
 
-## 🎯 Como Executar
+## ▶️ Como Executar
 
 Inicie o servidor de desenvolvimento:
 
@@ -51,20 +51,19 @@ npm run dev
 
 Abra [http://localhost:5173](http://localhost:5173) no navegador para visualizar a aplicação.
 
-## 🌐 Deploy
+## 🚀 Deploy
 
 Este projeto pode ser facilmente deployado nas seguintes plataformas:
 
 - **Vercel** - Deploy automático via GitHub
 - **GitHub Pages** - Hospedagem gratuita
 
-## 🤝 Colaboradores
+## 👥 Colaboradores
 
 Agradecimentos especiais a todos que contribuíram para este projeto:
 
-- 👑 **Kamila** (A protagonista principal) - [@kamilaferreiradev](https://github.com/kamilaferreiradev)
+- 👑 **Kamila** (A protagonista principal) - [@kamilavieira](https://github.com/kamilavieira)
 - Emanuel Sousa - [@emanuelsousa08](https://github.com/emanuelsousa08)
-- [Veja todos os colaboradores](https://github.com/emanuelsousa08/projeto-frontend-gt/graphs/contributors)
 
 ---
 
