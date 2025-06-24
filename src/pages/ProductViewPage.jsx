@@ -12,8 +12,8 @@ export default function ProductPage() {
     reference: "REF123456",
     stars: 4,
     rating: 138,
-    price: "R$ 499,90",
-    priceDiscount: "R$ 399,99",
+    price: 499.99,
+    priceDiscount: 399.99,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     images: [
@@ -33,32 +33,32 @@ export default function ProductPage() {
       id: 1,
       category: "Tênis",
       name: "K-Swiss V8 - Masculino",
-      price: "$200",
-      priceDiscount: "$100",
+      price: 200,
+      priceDiscount: 100,
       image: "/k-swiss-v8-masc.png",
     },
     {
       id: 2,
       category: "Tênis",
       name: "K-Swiss V8 - Masculino",
-      price: "$200",
-      priceDiscount: "$100",
+      price: 200,
+      priceDiscount: 100,
       image: "/k-swiss-v8-masc.png",
     },
     {
       id: 3,
       category: "Tênis",
       name: "K-Swiss V8 - Masculino",
-      price: "$200",
-      priceDiscount: "$100",
+      price: 200,
+      priceDiscount: 100,
       image: "/k-swiss-v8-masc.png",
     },
     {
       id: 4,
       category: "Tênis",
       name: "K-Swiss V8 - Masculino",
-      price: "$200",
-      priceDiscount: "$100",
+      price: 200,
+      priceDiscount: 100,
       image: "/k-swiss-v8-masc.png",
     },
   ];
@@ -71,8 +71,8 @@ export default function ProductPage() {
         reference={product.reference}
         stars={product.stars}
         rating={product.rating}
-        price={product.price}
-        priceDiscount={product.priceDiscount}
+        price={`R$ ${product.price}`}
+        priceDiscount={`R$ ${product.priceDiscount}`}
         description={product.description}
       >
         <ProductOptions options={product.options} shape="square" radius="6px" />
@@ -97,8 +97,8 @@ export default function ProductPage() {
                 image={product.image}
                 category={product.category}
                 name={product.name}
-                price={product.price}
-                priceDiscount={product.priceDiscount}
+                price={`R$ ${product.price}`}
+                priceDiscount={`R$ ${product.priceDiscount}`}
                 showDiscount={index < 2}
               />
             ))}

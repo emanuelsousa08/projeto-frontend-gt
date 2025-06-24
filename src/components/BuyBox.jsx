@@ -12,10 +12,19 @@ const BuyBox = ({
   description,
   children,
 }) => {
-  // const {addToCart} = useContext(useCart);
-  // const handleAddToCart = () => {
-  //   addToCart(product);
-  // }
+ 
+  const { addToCart } = useCart();
+  const handleAddToCart = () => {
+    const product = {
+      id: reference,
+      name,
+      price,
+      priceDiscount,
+      description
+    };
+    addToCart(product);
+  }
+  
 
   return (
     <>
@@ -66,7 +75,9 @@ const BuyBox = ({
           {children}
         </div>
         {/*BOTÃO DE COMPRAR */}
-        <button className="shop-button font-bold font-['Inter']">
+        <button 
+        onClick={handleAddToCart}
+        className="shop-button font-bold font-['Inter']">
           COMPRAR
         </button>
       </div>
