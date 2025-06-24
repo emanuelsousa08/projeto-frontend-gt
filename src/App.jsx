@@ -9,6 +9,7 @@ import PageLogin from './pages/PageLogin'
 import PageRegister from './pages/PageRegister'
 import FormRegister from './pages/FormRegister'
 import NotFound from './pages/NotFound'
+import Pedidos from './pages/Pedidos'
 
 
 function App() {
@@ -44,6 +45,11 @@ function App() {
           <Route path="/formregister" element={
             <Layout>
               <FormRegister />
+            </Layout>
+          }/>
+          <Route path="/my-orders" element={
+            <Layout>
+              <Pedidos />
             </Layout>
           }/>
           <Route path="*" element={

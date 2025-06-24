@@ -22,7 +22,7 @@ const Header = () => {
           </div>
           <SearchBar />
           <div className="flex items-center gap-4"> 
-            <div className="relative cursor-pointer mx-auto md:ml-2 lg:ml-5 right-1">
+            {/* <div className="relative cursor-pointer mx-auto md:ml-2 lg:ml-5 right-1">
               <img
                 src="/src/assets/mini-cart.svg"
                 alt="Carrinho"
@@ -31,8 +31,8 @@ const Header = () => {
               <div className="absolute -top-2 -right-2 bg-primary text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">
                 2
               </div>
-            </div>
-            {/* <IconCart /> */}
+            </div> */}
+            <IconCart />
           </div>
         </div>
         <AuthLink />
