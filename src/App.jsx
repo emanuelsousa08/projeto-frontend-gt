@@ -5,9 +5,6 @@ import Layout from './pages/Layout'
 import HomePage from './pages/HomePage'
 import ProductListingPage from './pages/ProductListingPage'
 import ProductViewPage from './pages/ProductViewPage'
-import PageLogin from './pages/PageLogin'
-import PageRegister from './pages/PageRegister'
-import FormRegister from './pages/FormRegister'
 import NotFound from './pages/NotFound'
 import Pedidos from './pages/Pedidos'
 
@@ -32,21 +29,6 @@ function App() {
               <ProductViewPage />
             </Layout>
           } />
-          <Route path="/login" element={
-            <Layout>
-              <PageLogin />
-            </Layout>
-          } />
-          <Route path="/register" element={
-            <Layout>
-              <PageRegister />
-            </Layout>
-          }/>
-          <Route path="/formregister" element={
-            <Layout>
-              <FormRegister />
-            </Layout>
-          }/>
           <Route path="/my-orders" element={
             <Layout>
               <Pedidos />
