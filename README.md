@@ -62,7 +62,7 @@ Este projeto pode ser facilmente deployado nas seguintes plataformas:
 
 Agradecimentos especiais a todos que contribuíram para este projeto:
 
-- 👑 **Kamila** (A protagonista principal) - [@kamilavieira](https://github.com/kamilavieira)
+- 👑 **Kamila** Vieira (A protagonista principal) - [@kamilavieira](https://github.com/kamilavieira)
 - Emanuel Sousa - [@emanuelsousa08](https://github.com/emanuelsousa08)
 
 ---
